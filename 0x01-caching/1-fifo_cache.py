@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """defines a basic fifo cache system."""
+from collections import OrderedDict
 from base_caching import BaseCaching
 
 
@@ -10,6 +11,7 @@ class FIFOCache(BaseCaching):
     def __inti__(self):
         """initialize cache storage"""
         super().__init(self)
+        self.cache_data = OrderedDict()
 
     def put(self, key, item):
         """implements a put system.

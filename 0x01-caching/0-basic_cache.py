@@ -12,9 +12,8 @@ class BasicCache(BaseCaching):
         implements the put method.
         inserts key,value pairs in a dictionary.
         """
-        if key is None or item is None:
-            pass
-        self.cache_data[key] = item
+        if key is not None and item is not None:
+            self.cache_data[key] = item
 
     def get(self, key):
         """
