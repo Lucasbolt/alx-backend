@@ -10,7 +10,7 @@ class FIFOCache(BaseCaching):
     """
     def __inti__(self):
         """initialize cache storage"""
-        super().__init(self)
+        super().__init()
         self.cache_data = OrderedDict()
 
     def put(self, key, item):
